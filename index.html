@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      Kindly fill this survey form with the required data to help in collecting
+      adequate information regarding the current state of residential
+      development in Nairobi
+    </p>
+
+    <form action="" id="survey-form">
+        <fieldset>
+            <label id="name-label"> Name:
+                <input id="name" type="name"  placeholder="James" required>
+            </label>
+            <label id="email-label"> Email:
+                <input id="email" type="email" pattern="[abc@gmail.com]" placeholder="joseph@gmail.com" required >
+            </label>
+
+            <label id="number-label"> Number:
+                <input id="number" type="number" pattern="[0-9]" min="10" max="12" placeholder="0729567856">
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <label for=""> What is your area of residence?
+            <select name="area-of-residence" id="dropdown"> 
+                <option value="0">(Select one below)</option>
+                <option value="1"> Karen</option>
+                <option value="2"> Runda</option>
+                <option value="3"> Westlands</option>
+            </select>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Period of residence</legend>
+                <label for="residence-period"> Below five years
+                    <input type="radio" id="below-five" name="residence-period" value="below-five">
+                </label>
+                <label for="residence-period"> Above five years
+                    <input type="radio" id="above-five" name="residence-period" value="above-five">
+                </label>
+                <label for="residence-period"> Not sure
+                    <input id="none" type="radio" name="residence-period" value="none">
+                </label>
+            
+        </fieldset>    
+
+        <fieldset>
+            <legend> Type of ownership</legend>
+                <label for="ownership-type"> Leasehold
+                    <input id="leasehold" type="radio" name="ownership-type" value="leasehold">
+                </label>
+                <label for="ownership-type"> Freehold
+                    <input id="freehold" type="radio" name="ownership-type" value="freehold">
+                </label>
+                <label for="ownership-type"> Not sure
+                    <input id="none" type="radio" name="ownership-type" value="none">
+                </label>
+        </fieldset> 
+
+        <fieldset>
+            <legend> What type of property do you own?</legend>
+                <label for="bungalow-property"> Bungalow 
+                    <input type="checkbox" value="Bungalow">
+                </label>
+                <label for="mansion-property"> Mansion 
+                    <input type="checkbox" value="Mansion">
+                </label>
+                <label for="villa-property"> Villa 
+                    <input type="checkbox" value="Villa">
+                </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Any additional comments to be included below</legend>
+            <label for="comments">
+                <textarea name="comments" id="comments" placeholder="add more comments here"></textarea>
+            </label>
+        </fieldset>
+
+            
+        <input type="submit" id="submit">
+        
+    </form>
+  </body>
 </html>
